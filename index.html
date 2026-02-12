@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Love and Care Gift Ministries International</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/logo.png">
+    <style>
+        :root {
+            --church-blue: #004AAD; 
+            --church-dark-soft: #00337a; 
+            --church-light: #f8fbff;
+        }
+
+        body {
+            background-color: white;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, var(--church-blue) 0%, var(--church-dark-soft) 100%) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        .navbar-brand, .nav-link { color: white !important; }
+        .navbar-brand { font-weight: bold; font-size: 1.1rem; max-width: 280px; white-space: normal; }
+
+        .hero-section {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 30, 70, 0.8), rgba(0, 74, 173, 0.6)); 
+            z-index: -1;
+        }
+
+        .custom-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        .custom-card:hover { transform: translateY(-10px); }
+        .card-img-top { aspect-ratio: 16 / 10; object-fit: cover; }
+
+        /* FIXED MAP CONTAINER */
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 400px;
+            background-color: #eee;
+        }
+
+        .section-divider {
+            width: 50px;
+            height: 3px;
+            background-color: var(--church-blue);
+            margin: 15px auto 40px;
+        }
+
+        /* EVENT CARD STYLING */
+        .event-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+            transition: 0.3s;
+        }
+        .event-card:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .event-date-badge {
+            background: var(--church-blue);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            width: 65px;
+        }
+        .ministry-overlay-card {
+        position: relative; 
+        height: 350px; /* Slightly taller to fit the link comfortably */
+        border: none; 
+        border-radius: 15px;
+        overflow: hidden; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+        transition: 0.3s;
+    }
+    .ministry-overlay-card:hover { transform: translateY(-8px); }
+    .ministry-overlay-card img { width: 100%; height: 100%; object-fit: cover; }
+    
+    .card-img-overlay-custom {
+        position: absolute; 
+        bottom: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 51, 122, 0.95) 10%, rgba(0,0,0,0.1) 60%);
+        display: flex; 
+        flex-direction: column; 
+        justify-content: flex-end; 
+        padding: 25px; 
+        color: white;
+    }
+
+    .learn-more-link {
+        color: #ffffff; /* Gold color for visibility */
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-top: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: 0.3s;
+    }
+    .learn-more-link:hover { color: white; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Love and Care Gift Ministries</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="school.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="Gallery page.html">Gallery</a></li>
+      </ul>
+      <div class="text-center">
+        <a href="give.html" class="btn btn-light btn-sm fw-bold px-3" style="color: var(--church-blue);">Support Us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-section">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-clouds-and-blue-sky-background-945-large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1 class="display-3 fw-bold mb-4 text-white">Welcome to Our<br>Faith Community</h1>
+        <p class="lead mx-auto mb-5 text-white opacity-90" style="max-width: 800px;">Experience faith, hope, and love in a contemporary environment.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#plan-visit" class="btn btn-primary btn-lg px-4 shadow">Plan Your Visit</a>
+            <a href="https://www.youtube.com/@gatetepapaministries6635" class="btn btn-outline-light btn-lg px-4">Watch Online</a>
+        </div>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="fw-bold" style="color: var(--church-dark-soft);">Our Ministries</h2>
+            <div class="section-divider"></div>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="ministry-overlay-card">
+                    <img src="assets/education.png" alt="Education">
+                    <div class="card-img-overlay-custom">
+                        <h4 class="fw-bold mb-1">Education</h4>
+                        <p class="small opacity-90 mb-0">Providing quality education and life-changing opportunities.</p>
+                        <a href="school.html" class="learn-more-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="ministry-overlay-card">
+                    <img src="assets/children.png" alt="Children">
+                    <div class="card-img-overlay-custom">
+                        <h4 class="fw-bold mb-1">Children's Ministry</h4>
+                        <p class="small opacity-90 mb-0">Nurturing the faith of our youngest members with love.</p>
+                        <a href="chidrensministry.html" class="learn-more-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="ministry-overlay-card">
+                    <img src="assets/tourism.JPG" alt="Tourism">
+                    <div class="card-img-overlay-custom">
+                        <h4 class="fw-bold mb-1">Tourism</h4>
+                        <p class="small opacity-90 mb-0">Sacred journeys connecting faithful hearts to spiritual heritage.</p>
+                        <a href="tourism.html" class="learn-more-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="plan-visit" class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: var(--church-dark-soft);">Plan Your Visit</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h3 class="fw-bold mb-4" style="color: var(--church-blue);">What to Expect</h3>
+                <div class="d-flex mb-4">
+                    <div class="me-3"><i class="bi bi-heart-fill fs-3 text-primary"></i></div>
+                    <div><h5 class="fw-bold mb-1">Warm Welcome</h5><p class="text-muted small">We are ready to make you feel at home.</p></div>
+                </div>
+                <div class="d-flex mb-4">
+                    <div class="me-3"><i class="bi bi-music-note-beamed fs-3 text-primary"></i></div>
+                    <div><h5 class="fw-bold mb-1">Modern Worship</h5><p class="text-muted small">Bible-based messages and uplifting music.</p></div>
+                </div>
+                <div class="d-flex">
+                    <div class="me-3"><i class="bi bi-cup-hot-fill fs-3 text-primary"></i></div>
+                    <div><h5 class="fw-bold mb-1">Casual Atmosphere</h5><p class="text-muted small">Come as you are! All are welcome.</p></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.743224886675!2d32.57864087405207!3d0.3514486640191845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb642aeadf27%3A0x331bf2f0f4767413!2slove%20and%20care%20church!5e0!3m2!1sen!2sug!4v1707400000000!5m2!1sen!2sug" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <div class="mt-3 text-center">
+                    <p class="text-muted small"><i class="bi bi-geo-alt-fill text-primary"></i><a style="list-style: none; color: gray; text-decoration: none;" href="https://maps.app.goo.gl/MUA2amHFq9g9feiH6">Click here to view on Google maps</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background-color: var(--church-light);">
+    <div class="container">
+        <h2 class="fw-bold text-center" style="color: var(--church-dark-soft);">Upcoming Events</h2>
+        <div class="section-divider"></div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8"> <div class="card event-card shadow-sm mb-3">
+                    <div class="card-body d-flex align-items-center p-3">
+                        <div class="event-date-badge me-4">
+                            <span class="small d-block opacity-75" style="font-size: 0.7rem;">MAR</span>
+                            <span class="fs-4">15</span>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1" style="color: var(--church-dark-soft);">Community Outreach</h5>
+                            <p class="text-muted small mb-0">Spreading hope through our monthly food and clothing drive at the main square.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card event-card shadow-sm mb-3">
+                    <div class="card-body d-flex align-items-center p-3">
+                        <div class="event-date-badge me-4">
+                            <span class="small d-block opacity-75" style="font-size: 0.7rem;">APR</span>
+                            <span class="fs-4">22</span>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1" style="color: var(--church-dark-soft);">Youth Leadership Summit</h5>
+                            <p class="text-muted small mb-0">A day of equipping the next generation for impactful service and purpose-driven living.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card event-card shadow-sm">
+                    <div class="card-body d-flex align-items-center p-3">
+                        <div class="event-date-badge me-4">
+                            <span class="small d-block opacity-75" style="font-size: 0.7rem;">MAY</span>
+                            <span class="fs-4">05</span>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1" style="color: var(--church-dark-soft);">Worship Night</h5>
+                            <p class="text-muted small mb-0">An evening of praise, prayer, and spiritual renewal open to the entire community.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Add/Update these in your <style> tag */
+    .event-card {
+        border: none;
+        border-radius: 10px; /* Clean rectangular look with soft edges */
+        background: white;
+        transition: 0.3s;
+    }
+    
+    .event-date-badge {
+        background: var(--church-blue);
+        color: white;
+        padding: 8px;
+        border-radius: 6px;
+        font-weight: bold;
+        text-align: center;
+        min-width: 70px;
+        line-height: 1.1;
+    }
+
+    /* Optional: subtle hover effect to make the list feel modern */
+    .event-card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08) !important;
+    }
+</style>
+<style>
+    /* Add/Update these in your <style> tag */
+    .event-card {
+        border: none;
+        border-radius: 12px; /* Slightly less rounded for a clean rectangular look */
+        background: white;
+        transition: 0.3s;
+    }
+    
+    .event-date-badge {
+        background: var(--church-blue);
+        color: white;
+        padding: 5px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        min-width: 60px;
+        line-height: 1.2;
+    }
+
+    .line-height-1 { line-height: 1; }
+</style>
+
+<section class="py-5 bg-white">
+    <div class="container text-center">
+        <h2 class="fw-bold" style="color: var(--church-dark-soft);"> Sunday Service Times</h2>
+        <div class="section-divider"></div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3">
+                <div class="p-4 bg-light shadow-sm rounded-3 border-bottom border-4 border-primary">
+                    <h6 class="text-muted fw-bold small text-uppercase">First Service</h6>
+                    <h4 class="fw-bold mb-0" style="color: var(--church-blue);">6:00 AM - 9:00 AM</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 bg-light shadow-sm rounded-3 border-bottom border-4 border-primary">
+                    <h6 class="text-muted fw-bold small text-uppercase">Main Service</h6>
+                    <h4 class="fw-bold mb-0" style="color: var(--church-blue);">10:00 AM - 1:00 PM</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 bg-light shadow-sm rounded-3 border-bottom border-4 border-primary">
+                    <h6 class="text-muted fw-bold small text-uppercase">Youth Service</h6>
+                    <h4 class="fw-bold mb-0" style="color: var(--church-blue);">6:00 PM - 8:00 PM</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="pt-5 pb-4 text-white" style="background-color: var(--church-dark-soft); border-top: 4px solid var(--church-blue);">
+    <div class="container">
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6 text-center text-md-start">
+                <img src="assets/logo.png" alt="Logo" style="max-height: 70px; margin-bottom: 20px;">
+                <p class="small opacity-75">Spreading the Gospel through tangible acts of kindness since 1998.</p>
+                <div class="d-flex gap-3 mt-4 justify-content-center justify-content-md-start">
+                    <a href="https://www.facebook.com/gatete.papa" class="text-white fs-5 opacity-75 hover-opacity-100"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/papagatete?igsh=Nmtoczg4d3o5a2Nx" class="text-white fs-5 opacity-75 hover-opacity-100"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/@gatetepapaministries6635" class="text-white fs-5 opacity-75 hover-opacity-100"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@user2704786326933?_r=1&_t=ZS-93kkS16rHD5" class="text-white fs-5 opacity-75 hover-opacity-100"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 text-center text-md-start">
+                <h6 class="fw-bold text-uppercase mb-3">Links</h6>
+                <ul class="list-unstyled small opacity-75">
+                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li class="mb-2"><a href="Gallery page.html" class="text-white text-decoration-none">Gallery</a></li>
+                    <li class="mb-2"><a href="give.html" class="text-white text-decoration-none">Give</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center text-md-start">
+                <h6 class="fw-bold text-uppercase mb-3">Contact Us</h6>
+                <div class="small opacity-75 mb-3 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+                    <i class="bi bi-geo-alt-fill text-info"></i>
+                    <span>Kawanda-Kirinyabigo/Kilokole</span>
+                </div>
+                <div class="small opacity-75 mb-3 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                    <i class="bi bi-telephone-fill text-info"></i>
+                    <span>+256 123 456 789</span> </div>
+                <div class="small opacity-75 mb-3 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                    <i class="bi bi-envelope-fill text-info"></i>
+                    <span>gbuyinza8@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h6 class="fw-bold text-uppercase mb-3 text-center text-md-start">Feedback</h6>
+                <form action="mailto:info@loveandcare.org" method="post" enctype="text/plain">
+                    <input type="email" name="Email" class="form-control form-control-sm mb-2 border-0" placeholder="Your Email" required>
+                    <textarea name="Message" class="form-control form-control-sm mb-2 border-0" rows="2" placeholder="How can we help?" required></textarea>
+                    <button class="btn btn-info btn-sm text-white w-100 fw-bold">Submit via Email</button>
+                </form>
+            </div>
+        </div>
+        
+        <hr class="mt-5 opacity-25">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="small opacity-50 mb-0">© 2026 Love and Care Gift Ministries International. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .hover-opacity-100:hover {
+        opacity: 1 !important;
+        transition: 0.3s;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

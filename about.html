@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Love and Care Gift Ministries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/logo.png">
+    
+    <style>
+        :root {
+            --church-blue: #004AAD; 
+            --church-dark-soft: #00337a; 
+            --church-light: #f8fbff;
+            /* NEW ACCENT COLOR */
+            --church-gold: #FFB300; 
+            /* THE ROYAL GRADIENT */
+            --royal-grad: linear-gradient(90deg, var(--church-blue) 0%, var(--church-dark-soft) 60%, var(--church-gold) 100%);
+        }
+
+        body {
+            background-color: white;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* GRADIENT NAVBAR */
+        .navbar {
+            background: var(--royal-grad) !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        .navbar-brand, .nav-link { color: white !important; }
+        .navbar-brand { font-weight: bold; font-size: 1.1rem; max-width: 280px; white-space: normal; }
+
+        /* RECTANGULAR UNIFORM CARDS */
+        .uniform-rect {
+            height: 280px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden;
+            border: none !important;
+        }
+
+        .story-text-card {
+            background: #ffffff;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            padding: 30px 45px;
+            border-left: 5px solid var(--church-gold); /* Hint of gold */
+        }
+
+        .story-img-card {
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        /* MISSION & VISION GRADIENT CARDS */
+        .core-card {
+            background: linear-gradient(135deg, var(--church-blue) 0%, var(--church-dark-soft) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 74, 173, 0.2);
+            border-bottom: 5px solid var(--church-gold);
+        }
+
+        /* LEADERSHIP */
+        .pastor-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--church-gold); /* Changed to Gold */
+            padding: 4px;
+            background: white;
+        }
+
+        /* FAITH SECTION WITH WARM GRADIENT */
+        .faith-section {
+            background: linear-gradient(to bottom, #fffcf0, #ffffff);
+            border-radius: 25px;
+            padding: 70px 30px;
+            border: 1px solid rgba(255, 179, 0, 0.2);
+        }
+
+        /* GRADIENT DIVIDERS */
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--church-blue), var(--church-gold));
+            margin: 15px auto 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Love and Care Gift Ministries</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="school.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      </ul>
+      <div class="text-center">
+        <a href="give.html" class="btn btn-warning btn-sm fw-bold px-4 shadow-sm text-dark">Support Us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main style="margin-top: 150px;">
+    <div class="container pb-5">
+
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold" style="color: var(--church-dark-soft);">Our Story</h1>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="row g-4 align-items-center mb-5 justify-content-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="uniform-rect story-text-card">
+                    <h3 style="color: var(--church-blue);">The Beginning</h3>
+                    <h6 class="text-muted small fw-bold mb-2">FOUNDED 1998</h6>
+                    <p class="text-muted mb-0">Love and Care Gift Ministries was born out of a passion to see communities transformed by the gospel and practical acts of kindness.</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6">
+                <img src="assets/begin.JPG" class="uniform-rect story-img-card" alt="Story">
+            </div>
+        </div>
+
+        <section class="my-5 py-5 border-top border-bottom">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="core-card">
+                        <i class="bi bi-eye-fill mb-3 d-block text-warning" style="font-size: 2.5rem;"></i>
+                        <h2 class="fw-bold">Our Vision</h2>
+                        <p>To be a global beacon of Christ's love, where faith leads to tangible transformation in every heart and community we touch.</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="core-card">
+                        <i class="bi bi-rocket-takeoff-fill mb-3 d-block text-warning" style="font-size: 2.5rem;"></i>
+                        <h2 class="fw-bold">Our Mission</h2>
+                        <p>To demonstrate God's grace by providing spiritual nourishment, quality education, and compassionate care to those in need.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 text-center">
+            <h2 class="fw-bold" style="color: var(--church-dark-soft);">Our Leadership</h2>
+            <div class="section-divider"></div>
+            <div class="row justify-content-center g-5">
+                <div class="col-md-5 col-lg-4">
+                    <img src="assets/papa.png" class="pastor-img mb-3 shadow" alt="Lead Pastor">
+                    <h4 class="mb-1 fw-bold" style="color: var(--church-blue);">Pastor Papa Gatete</h4>
+                    <p class="text-warning fw-bold mb-2 text-uppercase small">Lead Pastor</p>
+                    <p class="pastor-bio">Pastor John leads our ministry with a heart for spiritual renewal and over 25 years of experience in community development.</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <img src="assets/mama.png" class="pastor-img mb-3 shadow" alt="Executive Pastor">
+                    <h4 class="mb-1 fw-bold" style="color: var(--church-blue);">Pastor Jane Gatete</h4>
+                    <p class="text-warning fw-bold mb-2 text-uppercase small">Executive Pastor</p>
+                    <p class="pastor-bio">With a background in education, Pastor Jane oversees our family ministries, ensuring every member finds their place.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faith-section text-center my-5 shadow-sm">
+            <h2 class="fw-bold" style="color: var(--church-dark-soft);">Statement of Faith</h2>
+            <div class="section-divider"></div>
+            <div class="row justify-content-center text-start">
+                <div class="col-md-10 col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6 border-start border-warning border-3">
+                            <h6 class="fw-bold" style="color: var(--church-blue);">THE BIBLE</h6>
+                            <p class="small text-muted">We believe the Bible is the inspired, only infallible, authoritative Word of God.</p>
+                        </div>
+                        <div class="col-md-6 border-start border-warning border-3">
+                            <h6 class="fw-bold" style="color: var(--church-blue);">THE TRINITY</h6>
+                            <p class="small text-muted">There is one God, eternally existent in three persons: Father, Son, and Holy Spirit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="pt-5 pb-4 text-white" style="background-color: #00337a !important; border-top: 4px solid var(--church-gold);">
+    <div class="container">
+        <div class="row g-4 text-center text-md-start">
+            <div class="col-lg-3">
+                <img src="assets/logo.png" alt="Logo" style="max-height: 80px; margin-bottom: 20px;">
+                <p class="small opacity-75">Spreading the Gospel through tangible acts of kindness since 1998.</p>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="fw-bold text-uppercase mb-3">Links</h6>
+                <ul class="list-unstyled small opacity-75">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="fw-bold text-uppercase mb-3">Contact</h6>
+                <p class="small opacity-75 mb-1"><i class="bi bi-geo-alt-fill text-warning me-2"></i>Kawanda, Uganda</p>
+                <p class="small opacity-75"><i class="bi bi-envelope-fill text-warning me-2"></i>gbuyinza8@gmail.com</p>
+            </div>
+            <div class="col-lg-4">
+                <h6 class="fw-bold text-uppercase mb-3">Feedback</h6>
+                <form>
+                    <input type="email" class="form-control form-control-sm mb-2 border-0 bg-white" placeholder="Your Email">
+                    <button class="btn btn-warning btn-sm w-100 fw-bold">Submit</button>
+                </form>
+            </div>
+        </div>
+        <hr class="mt-5 opacity-25">
+        <p class="text-center small opacity-50">© 2026 Love and Care Gift Ministries International.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

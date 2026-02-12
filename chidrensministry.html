@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Ministry | Love and Care Gift Ministries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/logo.png">   
+    <style>
+        :root {
+            --church-blue: #004AAD; 
+            --church-dark-soft: #00337a; 
+            --church-light: #f8fbff;
+        }
+
+        body {
+            background-color: white;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* NAVBAR (Identical to Home) */
+        .navbar {
+            background: linear-gradient(90deg, var(--church-blue) 0%, var(--church-dark-soft) 100%) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        .navbar-brand, .nav-link { color: white !important; }
+        .navbar-brand { font-weight: bold; font-size: 1.1rem; max-width: 280px; white-space: normal; }
+
+        /* RESTORED HERO WITH BACKGROUND IMAGE */
+        .children-hero {
+            height: 450px;
+            background: linear-gradient(rgba(0, 30, 70, 0.7), rgba(0, 30, 70, 0.7)), 
+                        url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .section-divider {
+            width: 50px;
+            height: 3px;
+            background-color: var(--church-blue);
+            margin: 15px auto 40px;
+        }
+
+        /* IMAGE CARDS WITH TEXT OVERLAYS */
+        .overlay-card {
+            position: relative;
+            height: 300px;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .overlay-card:hover { transform: translateY(-5px); }
+        .overlay-card img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .card-img-overlay-custom {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(0, 51, 122, 0.95) 10%, rgba(0,0,0,0.1) 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px;
+            color: white;
+        }
+
+        /* CIRCULAR LEADERSHIP IMAGES */
+        .leader-image-wrapper {
+            width: 180px; height: 180px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            padding: 5px;
+            border: 3px solid var(--church-blue);
+            overflow: hidden;
+        }
+        .leader-img-circular { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+        footer { background-color: var(--church-dark-soft); color: white; border-top: 4px solid var(--church-blue); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Love and Care Gift Ministries</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="school.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="Gallery page.html">Gallery</a></li>
+      </ul>
+      <div class="text-center">
+        <a href="give.html" class="btn btn-light btn-sm fw-bold px-3" style="color: var(--church-blue);">Support Us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="children-hero">
+    <div class="container">
+        <h1 class="display-3 fw-bold mb-3">Spirit Movers</h1>
+        <p class="lead opacity-90 mx-auto" style="max-width: 700px;">Nurturing the faith of our youngest members through love, fun, and biblical truth.</p>
+        <div class="section-divider" style="background-color: white;"></div>
+    </div>
+</header>
+
+<section class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: var(--church-dark-soft);">What We Do</h2>
+            <p class="text-muted">Engaging environments built for spiritual discovery.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="overlay-card">
+                    <img src="https://images.unsplash.com/photo-1543165365-072e2ed0d45a?w=800" alt="Worship">
+                    <div class="card-img-overlay-custom">
+                        <h4 class="fw-bold mb-1">Interactive Worship</h4>
+                        <p class="small opacity-90 mb-0">High-energy praise sessions that allow children to express their love for God through music and dance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="overlay-card">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800" alt="Arts">
+                    <div class="card-img-overlay-custom">
+                        <h4 class="fw-bold mb-1">Creative Arts & Crafts</h4>
+                        <p class="small opacity-90 mb-0">Hands-on projects that help bring Bible lessons to life and spark the imagination of every child.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="overlay-card">
+                    <img src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?w=800" alt="Bible">
+                    <div class="card-img-overlay-custom">
+                        <h4 class="fw-bold mb-1">Engaging Bible Stories</h4>
+                        <p class="small opacity-90 mb-0">Bible truths shared through storytelling and drama that children can easily relate to.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="overlay-card">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800" alt="Games">
+                    <div class="card-img-overlay-custom">
+                        <h4 class="fw-bold mb-1">Fun Bible Games</h4>
+                        <p class="small opacity-90 mb-0">Themed activities that reinforce the weekly lesson through teamwork and playful competition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background-color: var(--church-light);">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="fw-bold" style="color: var(--church-dark-soft);">Our Mission & Goals</h2>
+                <div class="section-divider" style="margin: 15px 0 30px 0;"></div>
+                <p class="text-muted mb-4">The Spirit Movers ministry exists to partner with parents in leading children to a personal relationship with Jesus Christ. We focus on four key pillars:</p>
+                <div class="row g-3">
+                    <div class="col-sm-6"><div class="p-3 bg-white rounded shadow-sm border-start border-4 border-primary small fw-bold"><i class="bi bi-book me-2"></i> Biblical Truth</div></div>
+                    <div class="col-sm-6"><div class="p-3 bg-white rounded shadow-sm border-start border-4 border-primary small fw-bold"><i class="bi bi-shield-check me-2"></i> Safety & Care</div></div>
+                    <div class="col-sm-6"><div class="p-3 bg-white rounded shadow-sm border-start border-4 border-primary small fw-bold"><i class="bi bi-heart me-2"></i> Character Growth</div></div>
+                    <div class="col-sm-6"><div class="p-3 bg-white rounded shadow-sm border-start border-4 border-primary small fw-bold"><i class="bi bi-people me-2"></i> Community building</div></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="assets/children.png" class="img-fluid rounded-4 shadow" alt="Children">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Department Leadership</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row g-5 justify-content-center">
+            <div class="col-md-5 col-lg-4 text-center">
+                <div class="leader-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500" class="leader-img-circular" alt="HOD">
+                </div>
+                <h5 class="fw-bold mb-1">Name of Head 1</h5>
+                <p class="text-primary small fw-bold">Department Head</p>
+            </div>
+            <div class="col-md-5 col-lg-4 text-center">
+                <div class="leader-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500" class="leader-img-circular" alt="HOD">
+                </div>
+                <h5 class="fw-bold mb-1">Name of Head 2</h5>
+                <p class="text-primary small fw-bold">Department Head</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="pt-5 pb-4 text-white">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 text-center text-md-start">
+                <img src="assets/logo.png" alt="Logo" style="max-height: 70px; margin-bottom: 20px;">
+                <p class="small opacity-75">Spreading the Gospel through tangible acts of kindness since 1998.</p>
+                <div class="d-flex gap-3 mt-4 justify-content-center justify-content-md-start">
+                    <a href="https://www.facebook.com/gatete.papa" class="text-white fs-5 opacity-75 hover-opacity-100"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/papagatete?igsh=Nmtoczg4d3o5a2Nx" class="text-white fs-5 opacity-75 hover-opacity-100"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/@gatetepapaministries6635" class="text-white fs-5 opacity-75 hover-opacity-100"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@user2704786326933?_r=1&_t=ZS-93kkS16rHD5" class="text-white fs-5 opacity-75 hover-opacity-100"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 text-center text-md-start">
+                <h6 class="fw-bold text-uppercase mb-3">Links</h6>
+                <ul class="list-unstyled small opacity-75">
+                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li class="mb-2"><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                    <li class="mb-2"><a href="give.html" class="text-white text-decoration-none">Give</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-md-start">
+                <h6 class="fw-bold text-uppercase mb-3">Contact Us</h6>
+                <div class="small opacity-75 mb-3 d-flex align-items-center gap-2 justify-content-center justify-content-md-start">
+                    <i class="bi bi-geo-alt-fill text-info"></i><span>CGGG+VF5, Kampala, Uganda</span>
+                </div>
+                <div class="small opacity-75 mb-3 d-flex align-items-center gap-2 justify-content-center justify-content-md-start">
+                    <i class="bi bi-telephone-fill text-info"></i><span>+256 123 456 789</span>
+                </div>
+                <div class="small opacity-75 mb-3 d-flex align-items-center gap-2 justify-content-center justify-content-md-start">
+                    <i class="bi bi-envelope-fill text-info"></i><span>info@loveandcare.org</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h6 class="fw-bold text-uppercase mb-3 text-center text-md-start">Feedback</h6>
+                <form action="mailto:info@loveandcare.org" method="post" enctype="text/plain">
+                    <input type="email" class="form-control form-control-sm mb-2 border-0" placeholder="Your Email">
+                    <textarea class="form-control form-control-sm mb-2 border-0" rows="2" placeholder="Feedback"></textarea>
+                    <button class="btn btn-info btn-sm text-white w-100 fw-bold">Send</button>
+                </form>
+            </div>
+        </div>
+        <hr class="mt-5 opacity-25">
+        <p class="text-center small opacity-50 mb-0">© 2026 Love and Care Gift Ministries International.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

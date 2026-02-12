@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Our Future | Love and Care Gift Ministries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/logo.png">
+    <style>
+        :root {
+            --build-blue: #004AAD; 
+            --build-dark: #00337a; 
+            --build-bg: #f8fbff;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
+
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(90deg, var(--build-blue) 0%, var(--build-dark) 100%) !important;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .navbar-brand, .nav-link { color: white !important; }
+
+        /* HERO SECTION */
+        .give-hero {
+            height: 450px;
+            background: linear-gradient(rgba(0, 30, 70, 0.75), rgba(0, 30, 70, 0.75)), 
+                        url('https://images.unsplash.com/photo-1504194104404-4cd3c27f2824?w=1200'); /* Construction/Church Frame Style */
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: white; margin-top: 60px;
+        }
+
+        .section-divider {
+            width: 50px; height: 3px; background-color: var(--build-blue); margin: 15px auto 40px;
+        }
+
+        /* DONATION BOXES */
+        .method-card {
+            border: none;
+            border-radius: 15px;
+            background: white;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .method-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+        .paypal-box {
+            background: #003087; /* Official PayPal Blue */
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        footer { background-color: var(--build-dark); color: white; border-top: 4px solid var(--build-blue); }
+        .give-hero {
+        height: 500px;
+        /* Using a high-quality church construction/architecture background */
+        background: linear-gradient(rgba(0, 30, 70, 0.75), rgba(0, 30, 70, 0.75)), 
+                    url('assets/12262015415.jpg'); 
+        background-size: cover; 
+        background-position: center;
+        background-attachment: fixed; /* Creates a nice parallax effect when scrolling */
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        text-align: center; 
+        color: white; 
+        margin-top: 60px;
+    }
+
+    .scripture-text {
+        font-style: italic;
+        font-family: 'Georgia', serif;
+        font-size: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+        opacity: 0.95;
+    }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Love and Care Gift Ministries</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="school.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="Gallery page.html">Gallery</a></li>
+      </ul>
+      <div class="text-center">
+        <a href="give.html" class="btn btn-light btn-sm fw-bold px-3" style="color: var(--church-blue);">Support Us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="give-hero">
+    <div class="container">
+        <h1 class="display-2 fw-bold mb-4">Building His House</h1>
+        <div class="scripture-container mb-4">
+            <p class="scripture-text">
+                "Unless the Lord builds the house, its builders labor in vain."
+            </p>
+            <span class="fw-bold text-uppercase tracking-widest" style="letter-spacing: 3px;">— Psalm 127:1 —</span>
+        </div>
+        <div class="section-divider" style="background-color: white;"></div>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container py-4">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dee62?w=800" class="img-fluid rounded-4 shadow-lg" alt="Construction Site">
+                    <div class="position-absolute bottom-0 end-0 bg-primary text-white p-3 rounded-start m-3 shadow">
+                        <h6 class="mb-0 fw-bold">Current Phase: Structural Walling</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-3" style="color: var(--build-dark);">Building a Sanctuary of Hope</h2>
+                <p class="lead text-muted mb-4">Our church construction project is more than just bricks and mortar; it is the creation of a permanent home for the Gospel and a refuge for the community of Kawanda-Kirinyabigo.</p>
+                
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="p-3 border-start border-4 border-primary bg-light rounded">
+                            <h6 class="fw-bold mb-1">Modern Sanctuary</h6>
+                            <p class="small text-muted mb-0">A 500-seat capacity hall designed for worship and community gatherings.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 border-start border-4 border-info bg-light rounded">
+                            <h6 class="fw-bold mb-1">Children's Center</h6>
+                            <p class="small text-muted mb-0">Dedicated classrooms for Sunday school and early childhood education.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 border-start border-4 border-warning bg-light rounded">
+                            <h6 class="fw-bold mb-1">Community Hub</h6>
+                            <p class="small text-muted mb-0">Spaces for youth empowerment, counseling, and vocational training.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 border-start border-4 border-success bg-light rounded">
+                            <h6 class="fw-bold mb-1">Safety & Security</h6>
+                            <p class="small text-muted mb-0">A fully walled perimeter and secure entrance for all congregants.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-3 bg-white border rounded shadow-sm">
+                    <h6 class="fw-bold"><i class="bi bi-info-circle-fill text-primary me-2"></i>What Your Gift Buys</h6>
+                    <p class="small text-muted mb-0">Your contributions currently go toward purchasing **cement, steel bars, and bricks** to complete the main sanctuary walls. No gift is too small to make a difference.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background-color: var(--build-bg);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">How to Give</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="card h-100 method-card p-4">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-phone-fill fs-1 text-primary"></i>
+                        <h4 class="fw-bold mt-2">Mobile Money / Inquiries</h4>
+                    </div>
+                    <p class="text-center text-muted small">For direct bank transfers or local mobile money contributions, please contact:</p>
+                    <ul class="list-unstyled">
+                        <li class="p-3 bg-light rounded mb-2 d-flex justify-content-between">
+                            <strong>Airtel:</strong> <span>+256 123 456 789</span>
+                        </li>
+                        <li class="p-3 bg-light rounded d-flex justify-content-between">
+                            <strong>MTN:</strong> <span>+256 987 654 321</span>
+                        </li>
+                    </ul>
+                    <p class="text-center small text-primary fw-bold mt-2">Registered Name: Love & Care Gift Ministries</p>
+                </div>
+            </div>
+
+            <div class="card h-100 paypal-box text-center">
+    <div class="card-body">
+        <i class="bi bi-paypal fs-1"></i>
+        <h4 class="fw-bold mt-2">PayPal International</h4>
+        <p class="opacity-75">Support our construction project securely.</p>
+
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="hosted_button_id" value="PASTE_YOUR_BUTTON_ID_HERE" />
+            
+            <button type="submit" class="btn btn-warning btn-lg rounded-pill fw-bold text-dark px-5 shadow">
+                Donate Now
+            </button>
+        </form>
+
+        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" 
+             alt="Cards" class="img-fluid mt-3" style="max-height: 40px;">
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<footer class="pt-5 pb-4 text-white" style="background-color: #00337a !important; border-top: 4px solid #004AAD;">
+    <div class="container">
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6 text-center text-md-start">
+                <img src="assets/logo.png" alt="Logo" style="max-height: 70px; margin-bottom: 20px;">
+                <p class="small opacity-75">Spreading the Gospel through tangible acts of kindness since 1998.</p>
+                <div class="d-flex gap-3 mt-4 justify-content-center justify-content-md-start">
+                    <a href="https://www.facebook.com/gatete.papa" class="text-white fs-5 opacity-75"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/papagatete" class="text-white fs-5 opacity-75"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/@gatetepapaministries6635" class="text-white fs-5 opacity-75"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@user2704786326933" class="text-white fs-5 opacity-75"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 text-center text-md-start">
+                <h6 class="fw-bold text-uppercase mb-3">Links</h6>
+                <ul class="list-unstyled small opacity-75">
+                    <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li class="mb-2"><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                    <li class="mb-2"><a href="give.html" class="text-white text-decoration-none">Give</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center text-md-start">
+                <h6 class="fw-bold text-uppercase mb-3">Contact Us</h6>
+                <div class="small opacity-75 mb-3 d-flex align-items-start justify-content-center justify-content-md-start gap-2">
+                    <i class="bi bi-geo-alt-fill text-info"></i>
+                    <span>Kawanda-Kirinyabigo/Kilokole</span>
+                </div>
+                <div class="small opacity-75 mb-3 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                    <i class="bi bi-telephone-fill text-info"></i>
+                    <span>+256 123 456 789</span> 
+                </div>
+                <div class="small opacity-75 mb-3 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                    <i class="bi bi-envelope-fill text-info"></i>
+                    <span>gbuyinza8@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h6 class="fw-bold text-uppercase mb-3 text-center text-md-start">Feedback</h6>
+                <form action="mailto:info@loveandcare.org" method="post" enctype="text/plain">
+                    <input type="email" name="Email" class="form-control form-control-sm mb-2 border-0 bg-white" placeholder="Your Email" required>
+                    <textarea name="Message" class="form-control form-control-sm mb-2 border-0 bg-white" rows="2" placeholder="How can we help?" required></textarea>
+                    <button class="btn btn-info btn-sm text-white w-100 fw-bold">Submit via Email</button>
+                </form>
+            </div>
+        </div>
+        
+        <hr class="mt-5 opacity-25">
+        <div class="text-center">
+            <p class="small opacity-50 mb-0">© 2026 Love and Care Gift Ministries International. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
